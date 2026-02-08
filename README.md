@@ -188,7 +188,7 @@ public class Point2D {
 
 ### Task 1: Admire the simplicity of the `Point2D` `record` vs. the original equivalently functional `Point2D` `class`.
 
-## Part 2: Intellij + Gradle!
+## Part 2 (8pts.): Intellij + Gradle!
 
 You can clone repos from the terminal...or you could just use Intellij to clone it for you! You can access the *Clone
 Repository* window through two different ways:
