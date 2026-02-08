@@ -2,7 +2,13 @@
 
 **Author**: Jon Mrowczynski
 
-## Part 1a: Setting up a Local Intellij Project
+## Part 1: Intro to Intellij
+
+We could have an entire course dedicated to learning Intellij! We will only go
+over an **extremely** small number of its more commonly used features. We'll cover more throughout the semester and I'm sure you'll pick
+up more on your own.
+
+## Part 1a (8pts.): Setting up a Local Intellij Project 
 
 1. Open Intellij and create a New Project by going to *File -> New -> Project*.
 2. Name the project *Lab4* and select a JDK version of 21.
@@ -12,12 +18,10 @@
       projects a comparative breeze.
 4. Ensure *Add sample code* is unchecked and then click *Create*.
 5. Add the below code into a Java source file in the *src* directory and give it an appropriate name.
-    - You can add a new source file to the project by right-clicking on the *src* directory and going to *New -> Java Class*.
-    - **Notice that the src directory is colored blue**!
+    - You can add a new source file to the project by right-clicking on the *src* directory and going to *New -> Java Class*,
+      ensuring that *Class* is highlighted and entering in the name of the class in the provided field.
+    - **Notice that the src directory is colored blue**! This will be important later.
 ```java
-import java.io.File;
-import java.io.FileFilter;
-
 /**
  * Lists all the subdirectories contained in the same directory as this Java source file.
  *
@@ -39,7 +43,79 @@ public class SubDirLister {
 	}
 }
 ```
-6. Add the below code into a **different** Java source file in the *src* directory just like above and make sure to also give it an
+6. You should notice a lot of text is highlighted in red. This is indicating that these classes have not been imported.
+7. Click on the red highlighted text `File`, press `Alt+Enter` or `Cmd+Enter`, then select *Import class* to have Intellij automatically import the class.
+8. Do a similar thing for `FileFilter`. However a `FileFilter` is defined in two separate packages! Intellij should bring up a
+   menu asking you which package to import `FileFilter` from select the `java.io` package when prompted.
+
+## Part 1b (13pts.): Intro to Intellij's Built-in Tools
+
+1. Click on the *Run* button next to *Current File*. This runs the currently selected/viewed
+Java source file which should still be the `SubDirLister` `class`. 
+
+   - **This program was compiled and run without explicitly invoking `javac` or `java`!**
+   - You can also run this class's `main` by clicking the *Run* button on the same line as `main` or the same line as the
+  `SubDirLister` `class`. **This will be important later.**
+
+### Q1: When the program is run, what is printed below `The subdirectories found include:`? Copy and paste your answer below.
+
+```
+[Answer Here]
+```
+
+2. Notice how `new FileFilter()` is faded compared to the rest of the code. Click somewhere within the text `new FileFilter()` and press
+`Alt+Enter` or `Cmd+Enter`. You can use this keyboard shortcut anywhere in Intellij's editor to get Intellij's suggested edits, which are
+next to the yellow lightbulb icon. Select the *Replace with lambda* option. 
+
+### Q2: What is the new code that was generated?
+
+```java
+[Answer Here]
+```
+
+### Q3: Does the output of the program differ if it is run again with these changes? If so, how?
+
+[Answer Here]
+
+3. Notice how `import java.io.FileFilter` is now similarly formatted to how `new FileFilter()` was before removed by
+Intellij.
+
+4. Click anywhere in Intellij's text editor for this file and press `Ctrl+Alt+Shift+L` or `Ctrl+Cmd+Shift+L`. This should bring up a *Reformat File* window. You can see what code it will automatically reformat in the *Scope* section and what kinds of reformatting will be
+   performed in the *Options* section. These defaults are usually fine. Click *Run* to run these reformattings.
+   
+	- Among other things, this *Optimizes Imports* which removes any and all unused imports.
+
+5. There should be a yellow squiggle under the new text that Intellij generated. This is another way for Intellij to tell you it
+has suggested edits for improving your code. Click on any of the text that is underlined with this yellow squiggle, press
+`Alt+Enter` or `Cmd+Enter`, and now select *Replace lambda with a method reference*.
+
+### Q4: What is a lambda?
+
+[Answer here]
+
+### Q5: What is a method reference?
+
+[Answer here]
+
+### Q6: What is the new code that was generated?
+```java
+[Answer Here]
+```
+
+### Q7: Does the output of the program differ if it is run again with these changes? If so, how?
+
+[Answer Here]
+
+### Q8: Click on `File` and navigate to the class by pressing `Ctrl+B`. Copy and paste the 1418 line of code in `File.class` below:
+```java
+[Answer here]
+```
+
+## Part 1c (5pts.): Converting a `class` to a `record`.
+
+We will go over records in more detail later in lecture...however, you might be able to preliminarily see their advantage in this lab!
+
+1. Add the below code into a **different** Java source file in the *src* directory just like  in [Part 1a](#part-1a-8pts-setting-up-a-local-intellij-project). Ensure to give it an
    appropriate name!
 ```java
 /**
@@ -90,85 +166,23 @@ public class Point2D {
 }
 ```
 
-## Part 1b: Intro to Intellij's Built-in Tools
+2. Now open/view the `Point2D` class, run it, and examine the output. Notice that the first few lines of output print the `Point2D`
+**reference** rather than a nicely formatted `String` representing useful information about the 2D point.
 
-We could have an entire course dedicated to learning Intellij! We will only go
-over an **extremely** small number of its more commonly used features. We'll cover more throughout the semester and I'm sure you'll pick
-up more on your own.
-
-Open/View the `SubDirLister` class and click on the *Run* button next to *Current File*. This runs the currently selected/viewed
-Java source file. **Notice this program was compiled and run without explicitly invoking `javac` or `java`!**
-
-- Notice that you can do the same thing by clicking the *Run* button on the same line as `main`.
-
-### Q1: When the program is run, what is printed below `The subdirectories found include:`? Copy and paste your answer below.
-
-```
-[Answer Here]
-```
-
-Notice how `new FileFilter()` is faded compared to the rest of the code. Click somewhere within the text `new FileFilter()` and press
-`Alt+Enter` or `Cmd+Enter`. You can use this keyboard shortcut anywhere in Intellij's editor to get Intellij's suggested edits, which are
-next to the yellow lightbulb icon. Select the *Replace with lambda* option. 
-
-### Q2: What is the new code that was generated?
-
-```java
-[Answer Here]
-```
-
-### Q3: Does the output of the program differ if it is run again with these changes? If so, how?
-
-[Answer Here]
-
-Notice how `import java.io.FileFilter` is now similarly formatted to how `new FileFilter()` was before removed by
-Intellij.
-
-Click anywhere in Intellij's text editor for this file and press `Ctrl+Alt+Shift+L` or `Ctrl+Cmd+Shift+L`. This should bring up a *Reformat File* window. You can see what code it will automatically reformat in the *Scope* section and what kinds of reformatting will be
-   performed in the *Options* section. These defaults are usually fine. Click *Run* to run these reformattings.
-   
-Among other things, this *Optimizes Imports* which removes any and all unused imports.
-
-There should be a yellow squiggle under the new text that Intellij generated. This is another way for Intellij to tell you it
-has suggested edits for improving your code. Click on any of the text that is underlined with this yellow squiggle, press
-`Alt+Enter` or `Cmd+Enter`, and now select *Replace lambda with a method reference*.
-
-### Q4: What is a lambda?
-
-[Answer here]
-
-### Q5: What is a method reference?
-
-[Answer here]
-
-### Q6: What is the new code that was generated?
-```java
-[Answer Here]
-```
-
-### Q7: Does the output of the program differ if it is run again with these changes? If so, how?
-
-[Answer Here]
-
-## Part 1c: Converting a `class` to a `record`.
-
-Now open/view the `Point2D` class, run it, and examine the output. Notice that the first few lines of output print the `Point2D`
-**reference** rather than a nicely formatted `String` representing the 2D point.
-
-1. Change its `toString()` method as indicated by the TODO in the file. 
-	- **Hint**: Make sure to use the instance variables directly
+   1. Change its `toString()` method as indicated by the TODO. 
+      - **Pro-tip**: Make sure to use the instance variables directly
    rather than calling the getter functions.
-2. Ensure you correctly formatted the `String` representation of a `Point2D` by running the file.
-3. Once you get this working, delete the `TODO` comment.
+   2. Ensure you correctly formatted the `String` representation of a `Point2D` by running the file.
+   3. Once you get this working, delete the `TODO` comment.
 
-There should now be a faded yellow squiggle under `Point2D`. Click somewhere on `Point2D`, press `Alt+Enter` or `Cmd+Enter`, and select
+3. There should now be a faded yellow squiggle under `Point2D`. Click somewhere on `Point2D`, press `Alt+Enter` or `Cmd+Enter`, and select
 *Convert to record class*.
 
 ### Q8: Does the output of the program differ if it is run again with these changes? If so, how?
 
 [Answer Here]
 
-### Q9: Why does `p1 == p2` return `false` while `p1.equals(p2)` return `true`?
+### Q9 (2pts.): Why does `p1 == p2` return `false` while `p1.equals(p2)` return `true`?
 
 [Answer Here]
 
