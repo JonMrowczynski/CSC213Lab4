@@ -194,7 +194,7 @@ You can clone repos from the terminal...or you could just use Intellij to clone 
 Repository* window through two different ways:
 
 - If you don't have a project currently open, click *Clone Repository*.
-- If you have a project currently open, go to `*Main Menu* -> *New* -> *Project from Version Control...*.
+- If you have a project currently open, go to *Main Menu* -> *New* -> *Project from Version Control...*.
 
 Now copy and past the HTTPS URL of the repo you want to clone into the *URL* field. Here, we will clone:
 https://github.com/JonMrowczynski/CSC213SimpleGradleProject.git
