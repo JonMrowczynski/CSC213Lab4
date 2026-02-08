@@ -200,21 +200,22 @@ Now copy and past the HTTPS URL of the repo you want to clone into the *URL* fie
 https://github.com/JonMrowczynski/CSC213SimpleGradleProject.git
 
 Ensure that you are cloning the repo into a desirable directory location and then click *Clone*. This not only clones the
-repository...
-
-However, if the repo included files from a build system that's recognized by Intellij, it will automatically setup the project
+repository...if the repo included files from a build system that's recognized by Intellij, it will automatically setup the project
 for you! This should be the case for this repo.
 
-Follow the README in this repository before continuing to the last Part.
+Follow the README in this repository before continuing to [Part 3](#part-3-submit-work-to-the-corresponding-d2l-dropbox).
 
 ## Part 3: Submit Work to the corresponding D2L Dropbox
 
-Submit to D2L:
-- For Part 1 your:
-   1. SubDirLister.java
-   2. Point2D.java
-   3. Filled out README.md
-- For Part 2 your:
-   1. Range.java
-   2. RangeTest.java
-   3. Filled out README.md
+Submit a zip file to D2L that contains the **exact** directory structure:
+```
+mySolutions/
+├── Part 1
+│   ├── Point2D.java
+│   ├── README.md
+│   └── SubDirLister.java
+└── Part 2
+    ├── Range.java
+    ├── RangeTest.java
+    └── README.md
+```
