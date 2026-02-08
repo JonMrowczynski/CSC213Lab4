@@ -2,7 +2,7 @@
 
 **Author**: Jon Mrowczynski
 
-## Part 1: Intro to Intellij
+## Part 1 (26pts.): Intro to Intellij
 
 We could have an entire course dedicated to learning Intellij! We will only go
 over an **extremely** small number of its more commonly used features. We'll cover more throughout the semester and I'm sure you'll pick
