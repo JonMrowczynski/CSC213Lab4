@@ -77,36 +77,43 @@ next to the yellow lightbulb icon. Select the *Replace with lambda* option.
 
 [Answer Here]
 
+### Q4: What is a lambda?
+
+[Answer here]
+
 3. Notice how `import java.io.FileFilter` is now similarly formatted to how `new FileFilter()` was before removed by
 Intellij.
 
-4. Click anywhere in Intellij's text editor for this file and press `Ctrl+Alt+Shift+L` or `Ctrl+Cmd+Shift+L`. This should bring up a *Reformat File* window. You can see what code it will automatically reformat in the *Scope* section and what kinds of reformatting will be
-   performed in the *Options* section. These defaults are usually fine. Click *Run* to run these reformattings.
-   
-	- Among other things, this *Optimizes Imports* which removes any and all unused imports.
+4. Click anywhere in Intellij's text editor for this file and press `Ctrl+Alt+Shift+L` or `Ctrl+Cmd+Shift+L`. This should bring
+   up a *Reformat File* window. You can see what code it will automatically reformat in the *Scope* section and what kinds of
+   reformatting will be performed in the *Options* section. Make sure that the options that are selected are:
+   - Optimize Imports
+     - Among other things, removes any unused imports.
+   - Rearrange Code
+     - Modifies the format of the code.
+   - Code cleanup 
+     - Cleans up the code by performing any functionally equivalent simplifications.
+  
+	Click *Run* to run these reformattings.
 
 5. There should be a yellow squiggle under the new text that Intellij generated. This is another way for Intellij to tell you it
 has suggested edits for improving your code. Click on any of the text that is underlined with this yellow squiggle, press
 `Alt+Enter` or `Cmd+Enter`, and now select *Replace lambda with a method reference*.
 
-### Q4: What is a lambda?
-
-[Answer here]
-
-### Q5: What is a method reference?
-
-[Answer here]
-
-### Q6: What is the new code that was generated?
+### Q5: What is the new code that was generated?
 ```java
 [Answer Here]
 ```
 
-### Q7: Does the output of the program differ if it is run again with these changes? If so, how?
+### Q6: Does the output of the program differ if it is run again with these changes? If so, how?
 
 [Answer Here]
 
-### Q8: Click on `File` and navigate to the class by pressing `Ctrl+B`. Copy and paste the 1418 line of code in `File.class` below:
+### Q7: What is a method reference?
+
+[Answer here]
+
+### Q8: Click on `File` and navigate to the class by pressing `Ctrl+B`. Copy and paste the 1418th line of code in `File.class` below:
 ```java
 [Answer here]
 ```
