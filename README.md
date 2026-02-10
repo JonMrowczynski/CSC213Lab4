@@ -86,7 +86,7 @@ Intellij.
 
 4. Click anywhere in Intellij's text editor for this file and press `Ctrl+Alt+Shift+L` or `Ctrl+Cmd+Shift+L`. This should bring
    up a *Reformat File* window. You can see what code it will automatically reformat in the *Scope* section and what kinds of
-   reformatting will be performed in the *Options* section. Make sure that the options that are selected are:
+   reformatting will be performed in the *Options* section. Make sure the selected options are:
    - Optimize Imports
      - Among other things, removes any unused imports.
    - Rearrange Code
