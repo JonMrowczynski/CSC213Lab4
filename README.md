@@ -46,7 +46,7 @@ public class SubDirLister {
 6. You should notice a lot of text is highlighted in red. This is indicating that these classes have not been imported.
 7. Click on the red highlighted text `File`, press `Alt+Enter` or `Cmd+Enter`, then select *Import class* to have Intellij automatically import the class.
 8. Do a similar thing for `FileFilter`. However a `FileFilter` is defined in two separate packages! Intellij should bring up a
-   menu asking you which package to import `FileFilter` from select the `java.io` package when prompted.
+   menu asking you which package to import `FileFilter` from. Select the `java.io` package when prompted.
 
 ## Part 1b (13pts.): Intro to Intellij's Built-in Tools
 
