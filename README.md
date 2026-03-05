@@ -185,11 +185,11 @@ public class Point2D {
 3. There should now be a faded yellow squiggle under `Point2D`. Click somewhere on `Point2D`, press `Alt+Enter` or `Cmd+Enter`, and select
 *Convert to record class*.
 
-### Q8: Does the output of the program differ if it is run again with these changes? If so, how?
+### Q9: Does the output of the program differ if it is run again with these changes? If so, how?
 
 [Answer Here]
 
-### Q9 (2pts.): Why does `p1 == p2` return `false` while `p1.equals(p2)` return `true`?
+### Q10 (2pts.): Why does `p1 == p2` return `false` while `p1.equals(p2)` return `true`?
 
 [Answer Here]
 
